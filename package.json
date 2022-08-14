@@ -1,0 +1,20 @@
+{
+  "name": "MF-React-Vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd container && npm run start\" \"cd ReactApp && npm run start\" \"cd VueApp && npm run start\""
+  },
+  "private": true,
+  "workspaces": [
+    "container",
+    "ReactApp",
+    "VueApp"
+  ],
+  "author": "Omher",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
