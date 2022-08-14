@@ -18,8 +18,8 @@ const devConfig = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
-                helloReact: 'helloReact@http://localhost:8081/remoteEntry.js',
-                helloVue: 'helloVue@http://localhost:8082/remoteEntry.js'
+                ReactApp: 'ReactApp@http://localhost:8081/remoteEntry.js',
+                VueApp: 'VueApp@http://localhost:8082/remoteEntry.js'
             },
             shared: packageJson.dependencies
         })
