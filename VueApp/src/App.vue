@@ -1,4 +1,5 @@
 <template>
+<div :style="{border: '1px solid #3fb27f'}">
     <h2>{{ message }}</h2>
     <div class="input-counter">
     <input class="minus" type="button" v-on:click="handleDecrement" value="-" />
@@ -6,6 +7,7 @@
     <input class="plus" type="button" v-on:click="handleIncrement" value="+" />
     </div>
     <br/>
+</div>
 </template>
 <style scoped>
   h2 {

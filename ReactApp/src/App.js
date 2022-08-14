@@ -13,7 +13,7 @@ const HelloWorld = () => {
     });
   }, []);
   return (
-    <>
+    <div style={{border: "1px solid #5ed3f3"}}>
       <h2>This is from React!</h2>
       <div className="input-counter">
         <input
@@ -70,7 +70,7 @@ const HelloWorld = () => {
           }
         `}
       </style>
-    </>
+    </div>
   );
 };
 // const HelloReact = ({ counter }) => <div>Only React! {counter}</div>;
