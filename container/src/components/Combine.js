@@ -26,7 +26,7 @@ export default (props) => {
       <div ref={ref} />
       <p>and below</p>
       <div ref={ref2} />
-      <style jsx>
+      <style jsx="true">
         {`
           h1 {
             font-family: system-ui;

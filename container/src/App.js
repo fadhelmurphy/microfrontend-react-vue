@@ -12,7 +12,7 @@ const Header = () => (
     <Link to='/'><h3>home</h3></Link><br />
     <Link to='/react'><h3>WithReact</h3></Link><br />
     <Link to='/vue'><h3>WithVue</h3></Link>
-    <style jsx>
+    <style jsx="true">
     {`
         a {
             font-family: system-ui;

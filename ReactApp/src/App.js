@@ -36,7 +36,7 @@ const HelloWorld = () => {
         />
       </div>
       <br />
-      <style jsx>
+      <style jsx="true">
         {`
         h2{
           color: #5ed3f3;
