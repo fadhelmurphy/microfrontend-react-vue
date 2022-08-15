@@ -1,4 +1,4 @@
-import { mount } from 'ReactApp/root'
+import { mount } from 'ReactApp/Counter'
 import React, { useRef, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 

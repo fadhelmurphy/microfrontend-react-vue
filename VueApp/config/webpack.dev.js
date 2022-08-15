@@ -20,7 +20,7 @@ const devConfig = {
             name: 'VueApp',
             filename: 'remoteEntry.js',
             exposes: {
-                './root': './src/bootstrap'
+                './Counter': './src/bootstrap'
             },
             shared: packageJson.dependencies
         }),

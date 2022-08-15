@@ -1,5 +1,5 @@
-import { mount } from "ReactApp/root";
-import { mount as mount2 } from "VueApp/root";
+import { mount } from "ReactApp/Counter";
+import { mount as mount2 } from "VueApp/Counter";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 

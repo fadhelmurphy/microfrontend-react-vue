@@ -9,14 +9,14 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/VueApp/latest/'
+        publicPath: '/VueApp/'
     },
     plugins: [
         new ModuleFederationPlugin({
             name: 'VueApp',
             filename: 'remoteEntry.js',
             exposes: {
-                './root': './src/bootstrap'
+                './Counter': './src/bootstrap'
             },
             shared: packageJson.dependencies
         })

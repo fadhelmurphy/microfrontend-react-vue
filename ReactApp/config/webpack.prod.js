@@ -9,14 +9,14 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/ReactApp/latest/'
+        publicPath: '/ReactApp/'
     },
     plugins: [
         new ModuleFederationPlugin({
             name: 'ReactApp',
             filename: 'remoteEntry.js',
             exposes: {
-                './root': './src/bootstrap'
+                './Counter': './src/bootstrap'
             },
             shared: packageJson.dependencies
         })

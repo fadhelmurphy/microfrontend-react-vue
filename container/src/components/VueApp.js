@@ -1,4 +1,4 @@
-import { mount } from 'VueApp/root'
+import { mount } from 'VueApp/Counter'
 import React, { useRef, useEffect } from 'react'
 
 export default (props) => {

@@ -15,8 +15,8 @@ const prodConfig = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
-                helloReact: `helloReact@${domain}/helloReact/latest/remoteEntry.js`,
-                helloVue: `helloVue@${domain}/helloVue/latest/remoteEntry.js`
+                ReactApp: `ReactApp@${domain}/ReactApp/remoteEntry.js`,
+                VueApp: `VueApp@${domain}/VueApp/remoteEntry.js`
             },
             shared: packageJson.dependencies
         })
