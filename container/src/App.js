@@ -33,33 +33,15 @@ const Header = () => (
 )
 
 export default () => {
-    const [first, setfirst] = useState(1)
-    const props = {
-        config: {
-            counter: first,
-            update: (event) => {
-                setfirst(event+1)
-            },
-        }
-    }
     
     return (
         <Router history={history}>
             <Header />
             <hr />
             <Switch>
-                <Route path='/vue' render={()=><HelloVueApp config={{
-                    ...props.config,
-                    counter: first
-                }} />} />
-                <Route path='/react' render={()=> <HelloReactApp config={{
-                    ...props.config,
-                    counter: first
-                }} />} />
-                <Route path='/' render={()=><Combine config={{
-                    ...props.config,
-                    counter: first
-                }} />} />
+                <Route path='/vue' render={()=><HelloVueApp />} />
+                <Route path='/react' render={()=> <HelloReactApp />} />
+                <Route path='/' render={()=><Combine />} />
             </Switch>
         </Router>
     )

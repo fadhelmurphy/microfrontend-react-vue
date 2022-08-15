@@ -2,12 +2,12 @@ import { mount } from 'ReactApp/Counter'
 import React, { useRef, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 
-export default (props) => {
+export default () => {
     const ref = useRef(null);
     const history = useHistory();
 
     useEffect(() => {
-        const { onParentNavigate } = mount({selector: ref.current, config: {...props.config}})
+        const { onParentNavigate } = mount({selector: ref.current})
         history.listen(onParentNavigate)
     }, [])
 

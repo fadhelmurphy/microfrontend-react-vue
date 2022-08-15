@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import App from './App'
 
 const mount = (el) => {
-    const app = createApp(App, {counter: el.config?.counter, update: (event)=> el.config?.update(event)})
+    const app = createApp(App, {})
     app.mount(el.selector)
 }
 

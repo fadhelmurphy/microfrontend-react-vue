@@ -9,7 +9,7 @@ const prodConfig = {
     mode: 'production',
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/VueApp/'
+        publicPath: '/public/VueApp/'
     },
     plugins: [
         new ModuleFederationPlugin({

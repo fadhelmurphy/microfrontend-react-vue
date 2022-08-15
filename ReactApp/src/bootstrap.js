@@ -8,7 +8,7 @@ const mount = (el) => {
     const history = createBrowserHistory()
 
     ReactDOM.render(
-        <App history={history} counter={el.config?.counter} update={(event)=> el.config?.update(event)} />,
+        <App history={history} />,
         el.selector
     )
 

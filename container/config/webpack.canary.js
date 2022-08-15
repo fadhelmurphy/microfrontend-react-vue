@@ -1,18 +1,20 @@
 const { merge } = require('webpack-merge')
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 const commonConfig = require('./webpack.common')
-const packageJson = require('../package.json');
-const path = require('path');
-
+const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
+const packageJson = require('../package.json')
 
 const domain = process.env.PRODUCTION_DOMAIN || "https://module-federation.herokuapp.com/";
 
-const prodConfig = {
-    mode: 'production',
+const devConfig = {
+    mode: 'development',
     output: {
-        path: path.resolve(__dirname, '../public'),
-        filename: '[name].[contenthash].js',
-        publicPath: '/',
+        publicPath: domain,
+    },
+    devServer: {
+        port: 8080,
+        historyApiFallback: {
+            index: '/index.html'
+        }
     },
     plugins: [
         new ModuleFederationPlugin({
@@ -24,6 +26,7 @@ const prodConfig = {
             shared: packageJson.dependencies
         })
     ]
-}
+};
 
-module.exports = merge(commonConfig, prodConfig)
+
+module.exports = merge(commonConfig, devConfig)

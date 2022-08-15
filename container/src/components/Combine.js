@@ -1,31 +1,16 @@
-import { mount } from "ReactApp/Counter";
-import { mount as mount2 } from "VueApp/Counter";
-import React, { useRef, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+// import { mount } from "ReactApp/Mounting";
+import ReactCounter from "./ReactApp";
+import VueCounter from "./VueApp";
+import React from "react";
 
 export default (props) => {
-  const ref = useRef(null);
-  const ref2 = useRef(null);
-  const history = useHistory();
-
-  // console.log(props.config.counter)
-
-  useEffect(() => {
-    // const { onParentNavigate } = mount(ref.current)
-    const { onParentNavigate } = mount({
-      selector: ref.current,
-      config: { ...props.config },
-    });
-    mount2({ selector: ref2.current, config: { ...props.config } });
-    history.listen(onParentNavigate);
-  }, []);
 
   return (
     <>
       <h1>Both Render</h1>
-      <div ref={ref} />
+      <ReactCounter config={props.config} />
       <p>and below</p>
-      <div ref={ref2} />
+      <VueCounter config={props.config} />
       <style jsx="true">
         {`
           h1 {
