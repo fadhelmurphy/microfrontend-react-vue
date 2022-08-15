@@ -1,5 +1,5 @@
 {
-    "name": "containr",
+    "name": "container-react-vue",
     "version": "1.0.0",
     "scripts": {
         "start": "webpack serve --config=config/webpack.canary.js",

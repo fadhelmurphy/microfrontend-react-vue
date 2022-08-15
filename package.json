@@ -12,7 +12,7 @@
     "ReactApp",
     "VueApp"
   ],
-  "author": "Omher",
+  "author": "Fadhelpop",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^7.1.0"
